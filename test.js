@@ -1,7 +1,7 @@
 import childProcess from 'child_process';
 import test from 'ava';
 
-test('main', t => {
+test.cb('main', t => {
 	childProcess.execFile('./cli.js', ['"unicorn"'], {
 		cwd: __dirname
 	}, (err, stdout) => {
@@ -11,7 +11,7 @@ test('main', t => {
 	});
 });
 
-test('stdin', t => {
+test.cb('stdin', t => {
 	childProcess.exec('echo \'"unicorn"\' | ./cli.js', {
 		cwd: __dirname
 	}, (err, stdout) => {
