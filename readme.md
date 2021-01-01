@@ -1,4 +1,4 @@
-# to-single-quotes-cli [![Build Status](https://travis-ci.org/sindresorhus/to-single-quotes-cli.svg?branch=master)](https://travis-ci.org/sindresorhus/to-single-quotes-cli)
+# to-single-quotes-cli
 
 > Convert matching double-quotes to single-quotes: `I "love" unicorns` → `I 'love' unicorns`
 
