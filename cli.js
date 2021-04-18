@@ -1,8 +1,7 @@
 #!/usr/bin/env node
-'use strict';
-const getStdin = require('get-stdin');
-const meow = require('meow');
-const toSingleQuotes = require('to-single-quotes');
+import getStdin from 'get-stdin';
+import meow from 'meow';
+import toSingleQuotes from 'to-single-quotes';
 
 const cli = meow(`
 	Usage
@@ -28,5 +27,7 @@ if (!input && process.stdin.isTTY) {
 if (input) {
 	init(input);
 } else {
-	getStdin().then(init);
+	(async () => {
+		init(await getStdin());
+	})();
 }
